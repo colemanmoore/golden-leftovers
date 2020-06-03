@@ -1,24 +1,28 @@
 import p5 from 'p5'
+// import Tone from 'tone'
 
 const OCTAVE_DIVISION = 12;
 
 new p5(p => {
 
+    let synth
+
     p.setup = () => {
         p.createCanvas(p.windowHeight, p.windowHeight)
         p.frameRate(30)
+        // synth = new Tone.Synth().toMaster()
     }
 
     p.draw = () => {
-        const coords = getCircleCoord()
+        const {theta, radius} = getCircleCoord()
 
-        fillBackground(coords.t)
+        // fillBackground(theta)
 
         paintBigCircle()
 
-        paintKnob(coords.t)
+        paintKnob(theta)
 
-        const percent = 100 * (coords.t + p.PI) / (2 * p.PI);
+        const percent = 100 * (theta + p.PI) / (2 * p.PI);
         const sector = p.round(OCTAVE_DIVISION * (percent - 1) / 100);
     }
 

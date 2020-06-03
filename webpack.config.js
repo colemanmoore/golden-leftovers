@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './build'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -15,7 +15,7 @@ module.exports = {
     ],
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         publicPath: '/'
     },
     module: {
