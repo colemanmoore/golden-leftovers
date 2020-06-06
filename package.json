@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "p5": "^1.0.0",
+    "tone": "^13.8.25"
   },
   "devDependencies": {
     "css-loader": "^2.0.0",
