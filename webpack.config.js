@@ -10,8 +10,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Processing sketch'
-        })
+            hash: true,
+            title: 'golden leftovers',
+            template: path.resolve(__dirname, 'src/index.html'),
+        }),
     ],
     output: {
         filename: 'bundle.js',
